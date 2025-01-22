@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Chrome</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-[url('../bag.jpg')] bg-cover bg-center">
+    <div class="mt-5 flex justify-between items-center">
+        <div> </div>
+        <div class="flex gap-3 mr-7">
+            <a href="https://mail.google.com/mail/u/0/#inbox" class="text-sm font-semibold">Gmail</a>
+            <a href="https://www.google.com/imghp" class="text-sm font-semibold">Images</a>
+            <div class="relative">
+                <div class="cursor-pointer" onclick="toggleApps()">
+                    <img src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" alt="Google Apps" height="24"
+                        width="24">
+                </div>
+                <div class="hidden absolute top-8 right-0 border border-gray-200 rounded-lg p-4 bg-white shadow-md w-80 z-10"
+                    id="appsContainer">
+                    <div class="grid grid-cols-3 gap-4">
+                        <!-- <div> -->
+                        <a href="https://www.google.com/"
+                            class="flex-col items-center gap-2 p-2 rounded-md hover:bg-gray-100">
+                            <img class="w-8 h-8" src="https://www.google.com/favicon.ico" alt="Google">
+                            <span class="text-sm font-medium">Google</span>
+                        </a>
+                        <!-- </div> -->
+                        <a href="https://mail.google.com/"
+                            class="flex-col items-center gap-2 p-2 rounded-md hover:bg-gray-100">
+                            <img class="w-8 h-8" src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico"
+                                alt="Gmail">
+                            <span class="text-sm font-medium">Gmail</span>
+                        </a>
+                        <a href="https://drive.google.com/"
+                            class="flex-col items-center gap-2 p-2 rounded-md hover:bg-gray-100">
+                            <img class="w-8 h-8"
+                                src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png"
+                                alt="Drive">
+                            <span class="text-sm font-medium">Drive</span>
+                        </a>
+                        <a href="https://www.google.com/maps"
+                            class="flex-col items-center gap-2 p-2 rounded-md hover:bg-gray-100">
+                            <img class="w-8 h-8" src="https://cdn-icons-png.flaticon.com/512/2642/2642502.png"
+                                alt="Maps">
+                            <span class="text-sm font-medium">Maps</span>
+                        </a>
+                        <a href="https://www.youtube.com/"
+                            class="flex-col items-center gap-2 p-2 rounded-md hover:bg-gray-100">
+                            <img class="w-8 h-8" src="https://cdn-icons-png.flaticon.com/512/174/174883.png"
+                                alt="YouTube">
+                            <span class="text-sm font-medium">YouTube</span>
+                        </a>
+                        <a href="https://meet.google.com/"
+                            class="flex-col items-center gap-2 p-2 rounded-md hover:bg-gray-100">
+                            <img class="w-8 h-8" src="https://cdn-icons-png.flaticon.com/512/5968/5968552.png"
+                                alt="Meet">
+                            <span class="text-sm font-medium">Meet</span>
+                        </a>
+                        <a href="https://translate.google.com/"
+                            class="flex-col items-center gap-2 p-2 rounded-md hover:bg-gray-100">
+                            <img class="w-8 h-8" src="https://cdn-icons-png.flaticon.com/512/2875/2875427.png"
+                                alt="Translate">
+                            <span class="text-sm font-medium">Translate</span>
+                        </a>
+                        <a href="https://docs.google.com/"
+                            class="flex-col items-center gap-2 p-2 rounded-md hover:bg-gray-100">
+                            <img class="w-8 h-8" src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png"
+                                alt="Docs">
+                            <span class="text-sm font-medium">Docs</span>
+                        </a>
+                        <a href="https://sheets.google.com/"
+                            class="flex-col items-center gap-2 p-2 rounded-md hover:bg-gray-100">
+                            <img class="w-8 h-8" src="https://cdn-icons-png.flaticon.com/512/281/281761.png"
+                                alt="Sheets">
+                            <span class="text-sm font-medium">Sheets</span>
+                        </a>
+                        <a href="https://slides.google.com/"
+                            class="flex-col items-center gap-2 p-2 rounded-md hover:bg-gray-100">
+                            <img class="w-8 h-8" src="https://cdn-icons-png.flaticon.com/512/2991/2991117.png"
+                                alt="Slides">
+                            <span class="text-sm font-medium">Slides</span>
+                        </a>
+                        <a href="https://classroom.google.com/"
+                            class="flex-col items-center gap-2 p-2 rounded-md hover:bg-gray-100">
+                            <img class="w-8 h-8" src="https://ssl.gstatic.com/classroom/favicon.ico" alt="Classroom">
+                            <span class="text-sm font-medium">Classroom</span>
+                        </a>
+                        <a href="https://forms.google.com/"
+                            class="flex-col items-center gap-2 p-2 rounded-md hover:bg-gray-100">
+                            <img class="w-8 h-8" src="https://cdn-icons-png.flaticon.com/512/2991/2991110.png"
+                                alt="Forms">
+                            <span class="text-sm font-medium">Forms</span>
+                        </a>
+                        <a href="https://passwords.google.com/" class="flex-col gap-2 p-2 rounded-md hover:bg-gray-100">
+                            <img class="w-8 h-8" src="https://img.icons8.com/?size=100&id=KeCyyDy6KmOt&format=png"
+                                alt="Password Manager">
+                            <span class="text-sm font-medium">Password Manager</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Profile Icon and Menu -->
+            <div class="relative">
+                <div class="cursor-pointer" onclick="toggleProfileMenu()">
+                    <img class="rounded-full relative bottom-1"
+                        src="https://lh3.googleusercontent.com/ogw/AF2bZyjVi0YF3IkXYI5uxU0oBObjbhTgmT4He-bF1uk_Ak0wFg=s32-c-mo"
+                        alt="Profile" height="32" width="32">
+                </div>
+                <div class="hidden absolute w-96 top-16 right-0 bg-white border-solid border-2 rounded-lg p-4 shadow-md z-10"
+                    id="profileMenu">
+                    <div class="text-center">
+                        <b>dipexplorerid23@gmail.com</b>
+                    </div>
+                    <div class="text-center">
+                        <img class="rounded-full mx-auto"
+                            src="https://lh3.googleusercontent.com/a/ACg8ocJXuG0zAuOj23bjglRG6aC0-WWIT8D5ivgMJ04gQkYtc977DKU=s288-c-no"
+                            alt=" Profile" height="70" width="70">
+                        <h3>Hi, Dip!</h3>
+                        <a href="https://myaccount.google.com/">Manage Your Account</a>
+                    </div>
+                    <div class="grid gap-1 grid-cols-2">
+                        <div class=" bg-gray-300 rounded-tl-2xl rounded-bl-2xl p-3 border-l-2">
+                            <a href="https://accounts.google.com/v3/signin/"><i class="mr-2 fa-solid fa-plus"></i>Add
+                                Account
+                            </a>
+                        </div>
+                        <div class=" bg-gray-300 rounded-tr-2xl rounded-br-2xl p-3">
+                            <a href="https://accounts.google.com/signout/"><i
+                                    class=" mr-2 fa-solid fa-arrow-right-to-bracket"></i>Sign Out
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center relative top-28">
+        <h1 class="text-4xl font-bold m-5 px-10"
+            style="color: #b41c1c; font-family: Shadows Into Light, serif; font-weight: 700; font-style: normal;"
+            id="unfuck"></h1>
+        <h2 style="color: #c0c0c0; font-family:  Nothing You Could Do, serif; font-weight: 400; font-style: normal;"
+            class="text-2xl m-5" id="end-year-timer"></h2>
+        <h2 id="age-counter" class="text-2xl m-5"></h2>
+    </div>
+
+    <!-- main portion -->
+    <div class="flex justify-center relative top-40">
+
+        <div class="w-1/2">
+            <form action="https://www.google.com/search" method="get">
+                <div class="relative flex items-center gap-3">
+                    <!-- Search icon -->
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 text-gray-500"></i>
+
+                    <!-- Search input field with padding for icon -->
+                    <input
+                        class="py-2 pl-12 pr-4 w-full rounded-3xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        type="search" name="q" placeholder="Search Google or type a URL">
+
+                    <!-- Camera icon as button for image search -->
+                    <button type="button" onclick="openImageSearch()">
+                        <img src="https://play-lh.googleusercontent.com/BDWTTN85mBETnnPg_qekwlk1uCxnbl4wtnVE8cz_WyMHEntEJgQsdJaT4uA0_N0VWg=w240-h480-rw"
+                            alt="Search by image" class="w-8 absolute right-7 h-8 top-1">
+                    </button>
+                </div>
+            </form>
+
+            <!-- Image Upload Modal -->
+            <div id="dialog" class="hidden relative top-10 left-32 w-2/3 p-3 bg-gray-500 rounded-xl">
+                <!-- Close Button -->
+                <button id="closeButton" class="absolute top-1 right-3 text-white font-bold text-lg">&times;</button>
+                <h2 class="text-center font-bold text-lg text-white">Search any image with Google Lens</h2>
+                <form action="https://lens.google.com/v3/upload?" method="POST" enctype="multipart/form-data">
+                    <div class="flex items-center justify-center gap-2">
+                        <img class="w-7 h-7"
+                            src="https://upload.wikimedia.org/wikipedia/commons/6/60/Google_Photos_icon_%282015-2020%29.svg"
+                            alt="">
+                        <label for="customImageUpload" class="cursor-pointer text-white py-2 rounded-md">
+                            Choose Image
+                        </label>
+                        <input type="file" name="ep" id="customImageUpload" class="hidden">
+                        <button type="submit" class="text-white rounded-md">
+                            Upload Image
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="flex justify-center relative top-52 m-10">
+        <div class="quick_link grid grid-cols-10 gap-4">
+            <!-- Grid items here -->
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
