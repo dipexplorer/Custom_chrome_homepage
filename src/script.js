@@ -86,6 +86,26 @@ const links = [
     url: "https://ajay-dhangar.github.io/algo/#google_vignette",
     name: "Algorithms",
   },
+  {
+    icon: "https://avatars.githubusercontent.com/u/56705483",
+    url: "https://hoppscotch.io/",
+    name: "Hoppscotch",
+  },
+  {
+    icon: "https://logos-world.net/wp-content/uploads/2024/08/Notion-Logo-500x281.png",
+    url: "https://www.notion.so/1910aae19e2080fb85acee52d93e8ae9",
+    name: "Notion",
+  },
+  {
+    icon: "https://www.svgrepo.com/show/331488/mongodb.svg",
+    url: "https://cloud.mongodb.com/v2/6662bbefc101882bd6474da2#/metrics/replicaSet/678f4662fe813915be75ed07/explorer/videtube/users/find",
+    name: "MongoDB",
+  },
+  {
+    icon: "https://avatars.githubusercontent.com/u/1460763?s=200&v=4",
+    url: "https://console.cloudinary.com/pm/c-ea6d55cdec078f71b5a46418d59306/media-explorer",
+    name: "Cloudinary",
+  },
 ];
 
 links.forEach((link) => {
